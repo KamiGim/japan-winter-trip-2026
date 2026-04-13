@@ -1,5 +1,5 @@
 // Japan Winter 2025-2026 — Service Worker
-const CACHE_NAME = 'japan-winter-v2';
+const CACHE_NAME = 'japan-winter-v3';
 const ASSETS = [
   './',
   './index.html',
