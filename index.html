@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Japan Winter 2025-2026 — Nov 29 to Dec 9</title>
+
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#bc002d" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0a0c18" media="(prefers-color-scheme: dark)">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="JP 🇯🇵">
+    <link rel="apple-touch-icon" href="icons/icon-192.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="icons/icon-512.png">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --body-bg: #f0f0f5;
+            --bg: #f0f0f5;
+            --card-bg: #ffffff;
+            --text: #1a1a2e;
+            --subtext: #5a5a78;
+            --border: #d0d0e0;
+            --highlight-bg: #fff5f5;
+            --highlight-border: #bc002d;
+            --time-bg: #bc002d;
+            --time-color: #ffffff;
+            --day1: #bc002d;
+            --day2: #1565c0;
+            --day3: #2e7d32;
+            --day4: #e65100;
+            --day5: #6a1b9a;
+            --day6: #00838f;
+            --day7: #c62828;
+            --day8: #4527a0;
+            --day9: #00695c;
+            --day10: #f57f17;
+            --day11: #4e342e;
+            --tab-active-bg: #bc002d;
+            --tab-inactive-bg: rgba(0,0,0,0.06);
+            --tab-hover-bg: rgba(0,0,0,0.1);
+            --section-bg: #ffffff;
+            --phrase-card-bg: #fff8e1;
+            --phrase-card-border: #ffb300;
+            --hero-grad: linear-gradient(135deg, rgba(188,0,45,0.85), rgba(0,100,200,0.85));
+            --shadow: rgba(0,0,0,0.1);
+        }
+        [data-theme="dark"] {
+            --body-bg: #0a0c18;
+            --bg: #090c1a;
+            --card-bg: #12162a;
+            --text: #e8eaf6;
+            --subtext: #9098c8;
+            --border: #363c6e;
+            --highlight-bg: #1a0808;
+            --highlight-border: #ef5350;
+            --time-bg: #b71c1c;
+            --time-color: #ffffff;
+            --day1: #ef5350;
+            --day2: #42a5f5;
+            --day3: #66bb6a;
+            --day4: #ffa726;
+            --day5: #ab47bc;
+            --day6: #26c6da;
+            --day7: #ef5350;
+            --day8: #7e57c2;
+            --day9: #4db6ac;
+            --day10: #ffca28;
+            --day11: #a1887f;
+            --tab-active-bg: #bc002d;
+            --tab-inactive-bg: rgba(255,255,255,0.08);
+            --tab-hover-bg: rgba(255,255,255,0.15);
+            --section-bg: #12162a;
+            --phrase-card-bg: #18102a;
+            --phrase-card-border: #4a3a6e;
+            --hero-grad: linear-gradient(135deg, rgba(120,15,30,0.9), rgba(10,30,80,0.9));
+            --shadow: rgba(0,0,0,0.3);
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--body-bg);
+            color: var(--text);
+            line-height: 1.6;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .theme-toggle {
+            position: fixed; top: 18px; right: 18px; z-index: 9999;
+            background: rgba(255,255,255,0.2); border: 2px solid rgba(255,255,255,0.4);
+            color: white; border-radius: 50px; padding: 8px 16px;
+            cursor: pointer; font-size: 0.9em; font-weight: 600;
+            backdrop-filter: blur(8px); transition: all 0.3s;
+            display: flex; align-items: center; gap: 6px;
+        }
+        .theme-toggle:hover { background: rgba(255,255,255,0.35); transform: scale(1.05); }
+        [data-theme="dark"] .theme-toggle { background: rgba(0,0,0,0.35); border-color: rgba(255,255,255,0.2); }
+
+        .hero {
+            background: var(--hero-grad), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><defs><pattern id="p" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="3" fill="%23fff" opacity="0.08"/><path d="M0 50h100M50 0v100" stroke="%23fff" stroke-width="1" opacity="0.04"/></pattern></defs><rect width="1200" height="600" fill="%230f0a12"/><rect width="1200" height="600" fill="url(%23p)"/></svg>');
+            background-size: cover; background-position: center;
+            color: white; padding: 44px 20px; text-align: center;
+            min-height: 420px; display: flex; flex-direction: column;
+            justify-content: center; align-items: center;
+            box-shadow: 0 4px 20px var(--shadow);
+        }
+        .hero h1 { font-size: 2.4em; margin-bottom: 8px; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); animation: fadeInDown 0.8s ease-out; }
+        .hero .subtitle { font-size: 1.1em; margin-bottom: 14px; opacity: 0.9; animation: fadeInUp 0.8s ease-out 0.2s both; }
+        .hero .dates { font-size: 1em; background: rgba(255,255,255,0.1); padding: 10px 22px; border-radius: 50px; backdrop-filter: blur(10px); animation: fadeInUp 0.8s ease-out 0.4s both; }
+        .hero .flag { font-size: 3em; margin-bottom: 10px; }
+
+        @keyframes fadeInDown { from { opacity: 0; transform: translateY(-30px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes slideIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+        .tabs {
+            display: flex; justify-content: center; gap: 6px;
+            padding: 16px 20px 0; max-width: 600px; margin: 0 auto;
+            flex-wrap: wrap;
+        }
+        .tab-btn {
+            flex: 1; padding: 12px 8px; border: none; border-radius: 12px 12px 0 0;
+            background: var(--tab-inactive-bg); color: var(--subtext);
+            font-size: 0.9em; font-weight: 600; cursor: pointer;
+            transition: all 0.3s; min-width: 0;
+        }
+        .tab-btn:hover { background: var(--tab-hover-bg); }
+        .tab-btn.active { background: var(--tab-active-bg); color: white; }
+
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 20px; }
+
+        .day-section {
+            background: var(--card-bg); border: 1px solid var(--border);
+            margin: 18px 0; border-radius: 12px; overflow: hidden;
+            box-shadow: 0 10px 30px var(--shadow); animation: slideIn 0.6s ease-out;
+        }
+        .day-header { color: white; padding: 14px 18px; border-left: 5px solid; }
+        .day-header h2 { font-size: 1.3em; margin-bottom: 3px; }
+        .day-header .emoji { font-size: 1.5em; margin-right: 8px; }
+        .day-header .sub { font-size: 0.85em; opacity: 0.85; }
+        .day-content { padding: 16px 18px; }
+
+        .location {
+            margin: 12px 0; padding: 12px 14px;
+            background: var(--card-bg); border: 1px solid var(--border);
+            border-left: 4px solid var(--highlight-border);
+            border-radius: 8px; box-shadow: 0 2px 8px var(--shadow);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .location:hover { transform: translateX(5px); box-shadow: 0 4px 12px rgba(188,0,45,0.2); }
+        .location-title { font-size: 1.02em; font-weight: 600; color: var(--highlight-border); margin-bottom: 5px; }
+        .time {
+            display: inline-block; background: var(--time-bg); color: white;
+            padding: 5px 12px; border-radius: 20px; font-size: 0.9em;
+            margin-bottom: 10px; font-weight: 600;
+        }
+        .location-details { margin-top: 6px; font-size: 0.87em; color: var(--subtext); }
+        .location-details p { margin: 3px 0; }
+        .location-details strong { color: var(--text); }
+
+        .day-section.past { opacity: 0.45; filter: grayscale(40%); }
+
+        /* Map */
+        #map { height: 65vh; min-height: 400px; border-radius: 12px; box-shadow: 0 4px 20px var(--shadow); }
+        .map-legend { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+        .map-legend span { font-size: 0.85em; padding: 4px 10px; border-radius: 20px; color: white; font-weight: 600; }
+
+        /* Phrases */
+        .phrase-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; }
+        .phrase-card {
+            background: var(--phrase-card-bg); border: 1px solid var(--phrase-card-border);
+            border-radius: 10px; padding: 14px; transition: transform 0.3s;
+        }
+        .phrase-card:hover { transform: translateY(-2px); }
+        .phrase-card .cat { font-size: 0.78em; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--highlight-border); margin-bottom: 6px; }
+        .phrase-card .en { font-weight: 600; font-size: 1em; color: var(--text); }
+        .phrase-card .ja { font-size: 1.1em; color: var(--subtext); margin-top: 2px; }
+        .phrase-card .romaji { font-size: 0.85em; color: var(--subtext); opacity: 0.8; font-style: italic; margin-top: 2px; }
+
+        /* Tips */
+        .tips-list { list-style: none; }
+        .tips-list li {
+            background: var(--card-bg); border: 1px solid var(--border);
+            border-radius: 10px; padding: 14px 16px; margin: 10px 0;
+            box-shadow: 0 2px 8px var(--shadow);
+        }
+        .tips-list li strong { color: var(--highlight-border); }
+
+        footer {
+            text-align: center; padding: 20px; margin-top: 30px;
+            font-size: 0.85em; color: var(--subtext); border-top: 1px solid var(--border);
+        }
+
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 1.7em; }
+            .hero .subtitle { font-size: 0.95em; }
+            .tabs { gap: 4px; padding: 12px 12px 0; }
+            .tab-btn { padding: 10px 4px; font-size: 0.8em; }
+            .container { padding: 12px; }
+            .phrase-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+  <a href="https://kamigim.github.io/mytrips/" style="position:fixed;top:16px;left:16px;z-index:999;background:rgba(255,255,255,0.15);backdrop-filter:blur(8px);color:white;padding:8px 16px;border-radius:20px;text-decoration:none;font-size:0.85rem;border:1px solid rgba(255,255,255,0.2);">← My Trips</a>
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">🌙 Dark</button>
+
+    <div class="hero">
+        <div class="flag">🇯🇵</div>
+        <h1>Japan Winter 2025-2026</h1>
+        <div class="subtitle">冬の日本 — 11 Days in Japan</div>
+        <div class="dates">📅 November 29 — December 9, 2025</div>
+    </div>
+
+    <!-- Tabs -->
+    <div class="tabs">
+        <button class="tab-btn active" onclick="showTab('itinerary')">📋 Itinerary</button>
+        <button class="tab-btn" onclick="showTab('map')">🗺️ Map</button>
+        <button class="tab-btn" onclick="showTab('weather')">🌤️ Weather</button>
+        <button class="tab-btn" onclick="showTab('phrases')">🗣️ Phrases</button>
+        <button class="tab-btn" onclick="showTab('tips')">💡 Tips</button>
+    </div>
+
+    <!-- ITINERARY TAB -->
+    <div id="itinerary" class="tab-content active">
+        <div class="container">
+
+            <!-- Day 1: Sat Nov 29 - Tokyo -->
+            <div class="day-section" data-date="2025-11-29" data-day="2025-11-29" style="border-left-color: var(--day1);">
+                <div class="day-header" style="background: var(--day1);">
+                    <h2><span class="emoji">✈️</span> Day 1 — Saturday, Nov 29</h2>
+                    <div class="sub">Arrival · Tokyo</div>
+                </div>
+                <div class="day-content">
+                    <div class="location" data-day="2025-11-29" data-start-time="09:30">
+                        <div class="location-title">Check in at DMK Airport</div>
+                        <div class="time">🕐 09:30 – 11:00</div>
+                        <div class="location-details">
+                            <p>Arrive early for check-in and immigration at Don Mueang Airport.</p>
+                        </div>
+                    </div>
+                    <div class="location" data-day="2025-11-29" data-start-time="11:55">
+                        <div class="location-title">Flight to Tokyo (NRT)</div>
+                        <div class="time">✈️ 11:55 – 20:00</div>
+                        <div class="location-details">
+                            <p><strong>Arrival:</strong> Narita International Airport (NRT)</p>
+                        </div>
+                    </div>
+                    <div class="location" data-day="2025-11-29" data-start-time="20:30">
+                        <div class="location-title">Check in at Hotel</div>
+                        <div class="location-details">
+                            <p>Drop off bags and settle in for the night. Rest up for a busy day tomorrow!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 2: Sun Nov 30 - Tokyo -->
+            <div class="day-section" data-date="2025-11-30" style="border-left-color: var(--day2);">
+                <div class="day-header" style="background: var(--day2);">
+                    <h2><span class="emoji">🏙️</span> Day 2 — Sunday, Nov 30</h2>
+                    <div class="sub">Ginza · Meiji Shrines · Tokyo Tower</div>
+                </div>
+                <div class="day-content">
+                    <div class="location" data-day="2025-11-30" data-start-time="06:50">
+                        <div class="location-title">Bus to Ginza</div>
+                        <div class="time">🕐 06:50 – 09:30</div>
+                        <div class="location-details">
+                            <p>Early morning bus ride to Ginza district for shopping and sightseeing.</p>
+                        </div>
+                    </div>
+                    <div class="location" data-day="2025-11-30" data-start-time="10:00">
+                        <div class="location-title">Uniqlo Ginza</div>
+                        <div class="location-details">
+                            <p>Visit the famous 12-story Uniqlo flagship store in Ginza. Perfect for winter gear!</p>
+                        </div>
+                    </div>
+                    <div class="location" data-day="2025-11-30" data-start-time="12:30">
+                        <div class="location-title">Art Aquarium Museum Ginza</div>
+                        <div class="location-details">
+                            <p>Stunning aquarium art exhibition featuring illuminated tanks and artistic displays.</p>
+                        </div>
+                    </div>
+                    <div class="location" data-day="2025-11-30" data-start-time="14:30">
+                        <div class="location-title">Leave Luggages at Hotel</div>
+                        <div class="location-details">
+                            <p>Drop off bags before continuing exploration.</p>
+                        </div>
+                    </div>
+                    <div class="location" data-day="2025-11-30" data-start-time="15:30">
+                        <div class="location-title">Meiji Jingu Gaien 明治神宮外苑</div>
+                        <div class="location-details">
+                            <p>Beautiful tree-lined avenues leading to Meiji Shrine. Famous for ginkgo trees.</p>
+                        </div>
+                    </div>
+                    <div class="location" data-day="2025-11-30" data-start-time="16:30">
+                        <div class="location-title">Meiji Jingu 明治神宮</div>
+                        <div class="location-details">
+                            <p>Shinto shrine dedicated to Emperor Meiji and Empress Shoken. Peaceful forest setting.</p>
+                        </div>
+                    </div>
+                    <div class="location" data-day="2025-11-30" data-start-time="17:30">
+                        <div class="location-title">Tokyo Midtown Christmas / Midtown Garden Illuminations</div>
+                        <div class="location-details">
+                            <p>Stunning Christmas light displays at Tokyo Midtown and the surrounding garden areas.</p>
+                        </div>
+                    </div>
+                    <div class="location" data-day="2025-11-30" data-start-time="18:30">
+                        <div class="location-title">Tokyo Christmas Market (Meiji Jingu Gaien, Shinjuku)</div>
+                        <div class="location-details">
+                            <p>European-style Christmas market with food, drinks, and festive atmosphere.</p>
+                        </div>
+                    </div>
+                    <div class="location" data-day="2025-11-30" data-start-time="20:00">
+                        <div class="location-title">Tokyo Tower at Night</div>
+                        <div class="location-details">
+                            <p>Iconic red tower illuminated beautifully at night. Great for photos!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 3: Mon Dec 1 - Tokyo -->
+            <div class="day-section" data-date="2025-12-01" style="border-left-color: var(--day3);">
+                <div class="day-header" style="background: var(--day3);">
+                    <h2><span class="emoji">🛍️</span> Day 3 — Monday, Dec 1</h2>
+                    <div class="sub">Tsukiji · Senso-ji · Akihabara</div>
+                </div>
+                <div class="day-content">
+                    <div class="location" data-day="2025-12-01" data-start-time="08:00">
+                        <div class="location-title">Breakfast at Hotel</div>
+                        <div class="location-details">
+                            <p>Start the day with a good breakfast before exploring Tokyo.</p>
+                        </div>
+                    </div>
+                    <div class="location" data-day="2025-12-01" data-start-time="09:00">
+                        <div class="location-title">Tsukiji Fish Market 築地市場</div>
+                        <div class="location-details">
+                            <p>Famous fish market with fresh seafood, street food, and morning energy. Try fresh sushi!</p>
+                        </div>
+                    </div>
+                    <div class="location" data-day="2025-12-01" data-start-time="11:30">
+                        <div class="location-title">Senso-ji 浅草</div>
+                        <div class="location-details">
+                            <p>Tokyo's oldest temple in Asakusa district. Famous Kaminarimon gate and Nakamise shopping street.</p>
+                        </div>
+                    </div>
+                    <div class="location" data-day="2025-12-01" data-start-time="14:00">
+                        <div class="location-title">Akihabara 秋葉原</div>
+                        <div class="location-details">
+                            <p>Electronics and anime paradise. Explore shops for gadgets, games, and otaku culture.</p>
+                        </div>
+                    </div>
+                    <div class="location" data-day="2025-12-01" data-start-time="16:30">
+                        <div class="location-title">Marunouchi Illumination 2025 丸の内仲通り</div>
+                        <div class="location-details">
+                            <p>Breathtaking champagne-gold LED illuminations along Marunouchi Nakadori.</p>
+                        </div>
+                    </div>
+                    <div class="location" data-day="2025-12-01" data-start-time="18:00">
+                        <div class="location-title">Train to Shin-Urayasu Station</div>
+                        <div class="location-details">
+                            <p>Head to Shin-Urayasu (near Tokyo Disney) for the next day's adventure.</p>
+                        </div>
+                    </div>
+                    <div class="location" data-day="2025-12-01" data-start-time="19:00">
+                        <div class="location-title">Check in at Hotel</div>
+                        <div class="location-details">
+                            <p>Settle in at the hotel near Disney for easy access tomorrow.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 4: Tue Dec 2 - Tokyo Disneyland -->
+            <div class="day-section" data-date="2025-12-02" style="border-left-color: var(--day4);">
+                <div class="day-header" style="background: var(--day4);">
+                    <h2><span class="emoji">🏰</span> Day 4 — Tuesday, Dec 2</h2>
+                    <div class="sub">Tokyo Disneyland</div>
+                </div>
+                <div class="day-content">
+                    <div class="location" data-day="2025-12-02" data-start-time="08:00">
+                        <div class="location-title">Tokyo Disneyland 東京ディズニーランド</div>
+                        <div class="time">🎢 Full Day</div>
+                        <div class="location-details">
+                            <p>A full magical day at Tokyo Disneyland! Explore the seven themed lands.</p>
+                            <p><strong>Must-do:</strong> Space Mountain, Big Thunder Mountain, Pirates of the Caribbean, Haunted Mansion, Splash Mountain.</p>
+                            <p><strong>Tip:</strong> Arrive at opening, use the Tokyo Disney Resort app for wait times. Stay for the parade and fireworks!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 5: Wed Dec 3 - Yokohama -->
+            <div class="day-section" data-date="2025-12-03" style="border-left-color: var(--day5);">
+                <div class="day-header" style="background: var(--day5);">
+                    <h2><span class="emoji">🌊</span> Day 5 — Wednesday, Dec 3</h2>
+                    <div class="sub">Yokohama Bay Area</div>
+                </div>
+                <div class="day-content">
+                    <div class="location" data-day="2025-12-03" data-start-time="10:00">
+                        <div class="location-title">Yokohama Bay Quarter 横浜ベイクォーター</div>
+                        <div class="location-details">
+                            <p>Modern waterfront complex with shopping, dining, and harbor views.</p>
+                        </div>
+                    </div>
+                    <div class="location" data-day="2025-12-03" data-start-time="12:00">
+                        <div class="location-title">Minato Mirai 21 みなとみらい21</div>
+                        <div class="location-details">
+                            <p>Futuristic waterfront district with skyscrapers, malls, and the iconic Landmark Tower.</p>
+                        </div>
+                    </div>
+                    <div class="location" data-day="2025-12-03" data-start-time="14:30">
+                        <div class="location-title">Yokohama Red Brick Warehouse 横浜赤レンガ倉庫</div>
+                        <div class="location-details">
+                            <p>Historic red brick warehouses converted into shopping and cultural spaces. Beautiful waterfront views.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 6: Thu Dec 4 - Fuji -->
+            <div class="day-section" data-date="2025-12-04" style="border-left-color: var(--day6);">
+                <div class="day-header" style="background: var(--day6);">
+                    <h2><span class="emoji">🗻</span> Day 6 — Thursday, Dec 4</h2>
+                    <div class="sub">Fuji Five Lakes · Road Trip</div>
+                </div>
+                <div class="day-content">
+                    <div class="location" data-day="2025-12-04" data-start-time="08:00">
+                        <div class="location-title">Shinkansen to Fuji</div>
+                        <div class="location-details">
+                            <p>Take the Shinkansen (bullet train) to Fuji area.</p>
+                        </div>
+                    </div>
+                    <div class="location" data-day="2025-12-04" data-start-time="10:00">
+                        <div class="location-title">Pick up the Car</div>
+                        <div class="location-details">
+                            <p>Rent a car for exploring the Fuji Five Lakes area.</p>
+                        </div>
+                    </div>
+                    <div class="location" data-day="2025-12-04" data-start-time="10:30">
+                        <div class="location-title">Fujisan Yume No Ōhashi Bridge 富士山夢の大橋</div>
+                        <div class="location-details">
+                            <p>"Mt. Fuji Dream Bridge" — stunning viewpoint with perfect Fuji reflections.</p>
+                        </div>
+                    </div>
+                    <div class="location" data-day="2025-12-04" data-start-time="12:00">
+                        <div class="location-title">Fuji World Heritage Center 富士山世界遺産センター</div>
+                        <div class="location-details">
+                            <p>Learn about Mt. Fuji's cultural significance and history. Great exhibits about the mountain.</p>
+                        </div>
+                    </div>
+                    <div class="location" data-day="2025-12-04" data-start-time="14:00">
+                        <div class="location-title">Shiraito Falls 白糸ノ滝</div>
+                        <div class="location-details">
+                            <p>Beautiful waterfall with thin white streams cascading down. Designated as a Place of Scenic Beauty.</p>
+                        </div>
+                    </div>
+                    <div class="location" data-day="2025-12-04" data-start-time="15:30">
+                        <div class="location-title">Makaino Farm まかいの牧場</div>
+                        <div class="location-details">
+                            <p>Farm with fresh dairy products, ice cream, and beautiful pastoral views with Mt. Fuji in the background.</p>
+                        </div>
+                    </div>
+                    <div class="location" data-day="2025-12-04" data-start-time="17:00">
+                        <div class="location-title">Lake Tanuki 田貫湖</div>
+                        <div class="location-details">
+                            <p>Scenic lake famous for "Sakasa Fuji" (upside-down Fuji) reflections on calm water.</p>
+                        </div>
+                    </div>
+                    <div class="location" data-day="2025-12-04" data-start-time="18:00">
+                        <div class="location-title">Road Station Asagiri Kogen 道の駅 朝霧高原</div>
+                        <div class="location-details">
+                            <p>Michi-no-eki (road station) with local products, food, and panoramic views of Asagiri Plateau.</p>
+                        </div>
+                    </div>
+                    <div class="location" data-day="2025-12-04" data-start-time="19:00">
+                        <div class="location-title">Check in at Hotel</div>
+                        <div class="location-details">
+                            <p>Settle in at the hotel for the night.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 7: Fri Dec 5 - Fuji Five Lakes -->
+            <div class="day-section" data-date="2025-12-05" style="border-left-color: var(--day7);">
+                <div class="day-header" style="background: var(--day7);">
+                    <h2><span class="emoji">🏞️</span> Day 7 — Friday, Dec 5</h2>
+                    <div class="sub">Fuji Five Lakes Tour</div>
+                </div>
+                <div class="day-content">
+                    <div class="location" data-day="2025-12-05" data-start-time="08:00">
+                        <div class="location-title">Breakfast at Hotel</div>
+                        <div class="location-details">
+                            <p>Morning breakfast before exploring the Five Lakes.</p>
+                        </div>
+                    </div>
+                    <div class="location" data-day="2025-12-05" data-start-time="09:00">
+                        <div class="location-title">Lake Yamanaka 山中湖</div>
+                        <div class="location-details">
+                            <p> Largest of the Five Lakes. Great for views and boating.</p>
+                        </div>
+                    </div>
+                    <div class="location" data-day="2025-12-05" data-start-time="10:30">
+                        <div class="location-title">Oshino Hakkai 忍野八海</div>
+                        <div class="location-details">
+                            <p>Eight spring-fed ponds with crystal-clear water and traditional thatched-roof houses. Stunning Fuji views!</p>
+                        </div>
+                    </div>
+                    <div class="location" data-day="2025-12-05" data-start-time="12:00">
+                        <div class="location-title">Lake Saiko 西湖</div>
+                        <div class="location-details">
+                            <p>Known for its caves (Saiko and Narusawa Ice Caves) and peaceful atmosphere.</p>
+                        </div>
+                    </div>
+                    <div class="location" data-day="2025-12-05" data-start-time="13:30">
+                        <div class="location-title">Lake Shoji 精進湖</div>
+                        <div class="location-details">
+                            <p>Smallest of the Five Lakes. Quiet and scenic with great Fuji reflections.</p>
+                        </div>
+                    </div>
+                    <div class="location" data-day="2025-12-05" data-start-time="15:00">
+                        <div class="location-title">Lake Motosu 本栖湖</div>
+                        <div class="location-details">
+                            <p>Deepest of the Five Lakes. The lake depicted on the 1,000 yen bill!</p>
+                        </div>
+                    </div>
+                    <div class="location" data-day="2025-12-05" data-start-time="16:30">
+                        <div class="location-title">Momiji Tunnel もみじトンネル</div>
+                        <div class="location-details">
+                            <p>Beautiful tunnel of maple trees with stunning autumn colors (if in season).</p>
+                        </div>
+                    </div>
+                    <div class="location" data-day="2025-12-05" data-start-time="17:30">
+                        <div class="location-title">Oishi Park 大石公園</div>
+                        <div class="location-details">
+                            <p>Popular park on Lake Kawaguchiko with seasonal flowers and perfect Fuji photo spots.</p>
+                        </div>
+                    </div>
+                    <div class="location" data-day="2025-12-05" data-start-time="19:00">
+                        <div class="location-title">Check in at Hotel</div>
+                        <div class="location-details">
+                            <p>Settle in at the hotel for the night.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 8: Sat Dec 6 - Fuji to Kyoto -->
+            <div class="day-section" data-date="2025-12-06" style="border-left-color: var(--day8);">
+                <div class="day-header" style="background: var(--day8);">
+                    <h2><span class="emoji">🏯</span> Day 8 — Saturday, Dec 6</h2>
+                    <div class="sub">Chureito Pagoda · Kyoto</div>
+                </div>
+                <div class="day-content">
+                    <div class="location" data-day="2025-12-06" data-start-time="06:30">
+                        <div class="location-title">Chureito Pagoda 忠霊塔</div>
+                        <div class="time">🕐 06:30 – 08:00</div>
+                        <div class="location-details">
+                            <p>Famous pagoda on a hillside with Mt. Fuji in the background. Iconic photo spot! Climb the 398 steps for the view.</p>
+                        </div>
+                    </div>
+                    <div class="location" data-day="2025-12-06" data-start-time="08:00">
+                        <div class="location-title">Drive from Kawaguchiko → Fuji</div>
+                        <div class="time">🕐 08:00 – 11:00</div>
+                        <div class="location-details">
+                            <p>Return the rental car and head to Fuji Station.</p>
+                        </div>
+                    </div>
+                    <div class="location" data-day="2025-12-06" data-start-time="12:00">
+                        <div class="location-title">Shinkansen to Kyoto</div>
+                        <div class="location-details">
+                            <p>Take the Shinkansen (bullet train) from Fuji to Kyoto. Enjoy the scenic ride!</p>
+                        </div>
+                    </div>
+                    <div class="location" data-day="2025-12-06" data-start-time="15:00">
+                        <div class="location-title">Check in at Hotel</div>
+                        <div class="location-details">
+                            <p>Arrive in Kyoto and check in at the hotel.</p>
+                        </div>
+                    </div>
+                    <div class="location" data-day="2025-12-06" data-start-time="16:00">
+                        <div class="location-title">Ninenzaka & Sannenzaka 二寧坂 & 三年坂</div>
+                        <div class="location-details">
+                            <p>Historic preserved streets with traditional wooden buildings, shops, and tea houses leading to Kiyomizu-dera.</p>
+                        </div>
+                    </div>
+                    <div class="location" data-day="2025-12-06" data-start-time="17:30">
+                        <div class="location-title">Kiyomizu-dera 清水寺</div>
+                        <div class="location-details">
+                            <p>UNESCO World Heritage temple with famous wooden stage overlooking Kyoto. Stunning city views!</p>
+                        </div>
+                    </div>
+                    <div class="location" data-day="2025-12-06" data-start-time="19:00">
+                        <div class="location-title">Kiyomizu-dera Autumn Illumination</div>
+                        <div class="location-details">
+                            <p>Special evening illumination event with the temple and city beautifully lit up. Magical atmosphere!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 9: Sun Dec 7 - Kyoto -->
+            <div class="day-section" data-date="2025-12-07" style="border-left-color: var(--day9);">
+                <div class="day-header" style="background: var(--day9);">
+                    <h2><span class="emoji">👘</span> Day 9 — Sunday, Dec 7</h2>
+                    <div class="sub">Kimono · Arashiyama</div>
+                </div>
+                <div class="day-content">
+                    <div class="location" data-day="2025-12-07" data-start-time="09:00">
+                        <div class="location-title">Kimono Rental 着物レンタル</div>
+                        <div class="location-details">
+                            <p>Rent a beautiful kimono and stroll through Kyoto in traditional style!</p>
+                        </div>
+                    </div>
+                    <div class="location" data-day="2025-12-07" data-start-time="11:00">
+                        <div class="location-title">Arashiyama Togetsukyo Bridge</div>
+                        <div class="location-details">
+                            <p>Famous bridge crossing the Katsura River in scenic Arashiyama. Beautiful mountain views!</p>
+                        </div>
+                    </div>
+                    <div class="location" data-day="2025-12-07" data-start-time="13:00">
+                        <div class="location-title">Iwatayama Monkey Park 嵐山モンキーパークいわたやま</div>
+                        <div class="location-details">
+                            <p>Hike up to see over 100 Japanese macaque monkeys roaming freely. Great views of Kyoto from the top!</p>
+                        </div>
+                    </div>
+                    <div class="location" data-day="2025-12-07" data-start-time="16:00">
+                        <div class="location-title">Teramachi-dori</div>
+                        <div class="location-details">
+                            <p>Shopping street in downtown Kyoto with traditional crafts, souvenirs, and cafes.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 10: Mon Dec 8 - Osaka -->
+            <div class="day-section" data-date="2025-12-08" style="border-left-color: var(--day10);">
+                <div class="day-header" style="background: var(--day10);">
+                    <h2><span class="emoji">🏰</span> Day 10 — Monday, Dec 8</h2>
+                    <div class="sub">Osaka Castle · Dotonbori</div>
+                </div>
+                <div class="day-content">
+                    <div class="location" data-day="2025-12-08" data-start-time="09:00">
+                        <div class="location-title">Train to Osaka</div>
+                        <div class="location-details">
+                            <p>Take the train from Kyoto to Osaka (about 30 minutes).</p>
+                        </div>
+                    </div>
+                    <div class="location" data-day="2025-12-08" data-start-time="10:00">
+                        <div class="location-title">Check in at Hotel</div>
+                        <div class="location-details">
+                            <p>Drop off bags at the hotel.</p>
+                        </div>
+                    </div>
+                    <div class="location" data-day="2025-12-08" data-start-time="11:00">
+                        <div class="location-title">Daimaru Umeda Store 大丸梅田店</div>
+                        <div class="location-details">
+                            <p>Premium department store in Umeda with luxury brands and gourmet food.</p>
+                        </div>
+                    </div>
+                    <div class="location" data-day="2025-12-08" data-start-time="13:00">
+                        <div class="location-title">Osaka Castle 大阪城</div>
+                        <div class="location-details">
+                            <p>Historic castle and one of Japan's most famous landmarks. Beautiful park grounds and museum inside.</p>
+                        </div>
+                    </div>
+                    <div class="location" data-day="2025-12-08" data-start-time="16:00">
+                        <div class="location-title">Osaka Castle Illumination</div>
+                        <div class="location-details">
+                            <p>Evening light-up event making the castle even more spectacular. Don't miss the reflection in the moat!</p>
+                        </div>
+                    </div>
+                    <div class="location" data-day="2025-12-08" data-start-time="18:00">
+                        <div class="location-title">Dotonbori & Shinsaibashi 道頓堀・心斎橋</div>
+                        <div class="location-details">
+                            <p>Osaka's most famous entertainment district! Neon lights, Glico Running Man sign, street food (takoyaki, okonomiyaki), and endless shopping.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 11: Tue Dec 9 - Osaka Departure -->
+            <div class="day-section" data-date="2025-12-09" style="border-left-color: var(--day11);">
+                <div class="day-header" style="background: var(--day11);">
+                    <h2><span class="emoji">✈️</span> Day 11 — Tuesday, Dec 9</h2>
+                    <div class="sub">Last Day · Departure</div>
+                </div>
+                <div class="day-content">
+                    <div class="location" data-day="2025-12-09" data-start-time="08:00">
+                        <div class="location-title">Osaka Kizu Market 木津卸売市場</div>
+                        <div class="location-details">
+                            <p>Famous wholesale market with fresh seafood and produce. Great for experiencing Osaka's food culture!</p>
+                        </div>
+                    </div>
+                    <div class="location" data-day="2025-12-09" data-start-time="10:00">
+                        <div class="location-title">Tsutenkaku</div>
+                        <div class="location-details">
+                            <p>Iconic tower in Shinsekai district, symbol of Osaka. Great views from the observation deck!</p>
+                        </div>
+                    </div>
+                    <div class="location" data-day="2025-12-09" data-start-time="11:30">
+                        <div class="location-title">Shinsekai</div>
+                        <div class="location-details">
+                            <p>Retro entertainment district with nostalgic Showa-era vibe. Try kushikatsu (deep-fried skewers)!</p>
+                        </div>
+                    </div>
+                    <div class="location" data-day="2025-12-09" data-start-time="13:00">
+                        <div class="location-title">Christmas Market in Osaka Ten-shiba 2025</div>
+                        <div class="location-details">
+                            <p>Festive Christmas market at Osaka Ten-shiba with food, drinks, and holiday atmosphere.</p>
+                        </div>
+                    </div>
+                    <div class="location" data-day="2025-12-09" data-start-time="15:00">
+                        <div class="location-title">Check in at KIX</div>
+                        <div class="location-details">
+                            <p>Head to Kansai International Airport for departure. Last-minute duty-free shopping!</p>
+                        </div>
+                    </div>
+                    <div class="location" data-day="2025-12-09" data-start-time="17:00">
+                        <div class="location-title">Flight to Bangkok (BKK)</div>
+                        <div class="time">✈️ 17:00 – 21:00</div>
+                        <div class="location-details">
+                            <p><strong>Route:</strong> KIX → BKK</p>
+                            <p>Safe travels home! 🏠</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- MAP TAB -->
+    <div id="map-tab" class="tab-content">
+        <div class="container">
+            <div id="map"></div>
+            <div class="map-legend">
+                <span style="background:var(--day1);">Day 1-3</span>
+                <span style="background:var(--day4);">Day 4</span>
+                <span style="background:var(--day5);">Day 5</span>
+                <span style="background:var(--day6);">Day 6-7</span>
+                <span style="background:var(--day8);">Day 8</span>
+                <span style="background:var(--day9);">Day 9</span>
+                <span style="background:var(--day10);">Day 10</span>
+                <span style="background:var(--day11);">Day 11</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- WEATHER TAB -->
+    <div id="weather" class="tab-content">
+        <div class="container">
+            <div style="text-align:center; margin: 20px 0;">
+                <h3 style="margin-bottom: 12px;">🌤️ Tokyo Weather</h3>
+                <p style="color: var(--subtext); margin-bottom: 20px;">Live weather for Tokyo — Late November/early December is cool (5-15°C). Bring warm clothes!</p>
+                <div id="weather-widget" style="max-width:500px; margin: 0 auto; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px var(--shadow);">
+                    <iframe src="https://wttr.in/Tokyo?format=v2&lang=en" style="width:100%; min-height:300px; border:none; border-radius: 12px;" loading="lazy"></iframe>
+                </div>
+                <p style="color: var(--subtext); margin-top: 16px; font-size: 0.85em;">📊 <strong>Nov/Dec avg:</strong> 5-15°C · Cool & dry · Layered clothing recommended · Chance of early snow in Fuji area</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- PHRASES TAB -->
+    <div id="phrases" class="tab-content">
+        <div class="container">
+            <h3 style="margin-bottom: 16px; text-align:center;">🗣️ Essential Japanese Phrases</h3>
+            <div class="phrase-grid">
+
+                <div class="phrase-card">
+                    <div class="cat">Greetings</div>
+                    <div class="en">Hello</div>
+                    <div class="ja">こんにちは</div>
+                    <div class="romaji">konnichiwa</div>
+                </div>
+                <div class="phrase-card">
+                    <div class="cat">Greetings</div>
+                    <div class="en">Good morning</div>
+                    <div class="ja">おはようございます</div>
+                    <div class="romaji">ohayō gozaimasu</div>
+                </div>
+                <div class="phrase-card">
+                    <div class="cat">Greetings</div>
+                    <div class="en">Good evening</div>
+                    <div class="ja">こんばんは</div>
+                    <div class="romaji">konbanwa</div>
+                </div>
+                <div class="phrase-card">
+                    <div class="cat">Greetings</div>
+                    <div class="en">Goodbye</div>
+                    <div class="ja">さようなら</div>
+                    <div class="romaji">sayōnara</div>
+                </div>
+                <div class="phrase-card">
+                    <div class="cat">Polite</div>
+                    <div class="en">Thank you</div>
+                    <div class="ja">ありがとうございます</div>
+                    <div class="romaji">arigatō gozaimasu</div>
+                </div>
+                <div class="phrase-card">
+                    <div class="cat">Polite</div>
+                    <div class="en">You're welcome</div>
+                    <div class="ja">どういたしまして</div>
+                    <div class="romaji">dōitashimashite</div>
+                </div>
+                <div class="phrase-card">
+                    <div class="cat">Polite</div>
+                    <div class="en">Excuse me / Sorry</div>
+                    <div class="ja">すみません</div>
+                    <div class="romaji">sumimasen</div>
+                </div>
+                <div class="phrase-card">
+                    <div class="cat">Polite</div>
+                    <div class="en">I'm sorry</div>
+                    <div class="ja">ごめんなさい</div>
+                    <div class="romaji">gomen nasai</div>
+                </div>
+                <div class="phrase-card">
+                    <div class="cat">Shopping</div>
+                    <div class="en">How much is this?</div>
+                    <div class="ja">これはいくらですか？</div>
+                    <div class="romaji">kore wa ikura desu ka?</div>
+                </div>
+                <div class="phrase-card">
+                    <div class="cat">Shopping</div>
+                    <div class="en">Can I pay by card?</div>
+                    <div class="ja">カードで払えますか？</div>
+                    <div class="romaji">kādo de haraemasu ka?</div>
+                </div>
+                <div class="phrase-card">
+                    <div class="cat">Shopping</div>
+                    <div class="en">Do you have this in size L?</div>
+                    <div class="ja">これのLサイズはありますか？</div>
+                    <div class="romaji">kore no eru saizu wa arimasu ka?</div>
+                </div>
+                <div class="phrase-card">
+                    <div class="cat">Navigation</div>
+                    <div class="en">Where is ___?</div>
+                    <div class="ja">___はどこですか？</div>
+                    <div class="romaji">___ wa doko desu ka?</div>
+                </div>
+                <div class="phrase-card">
+                    <div class="cat">Navigation</div>
+                    <div class="en">Where is the station?</div>
+                    <div class="ja">駅はどこですか？</div>
+                    <div class="romaji">eki wa doko desu ka?</div>
+                </div>
+                <div class="phrase-card">
+                    <div class="cat">Navigation</div>
+                    <div class="en">Where is the toilet?</div>
+                    <div class="ja">トイレはどこですか？</div>
+                    <div class="romaji">toire wa doko desu ka?</div>
+                </div>
+                <div class="phrase-card">
+                    <div class="cat">Food</div>
+                    <div class="en">I want this one</div>
+                    <div class="ja">これをください</div>
+                    <div class="romaji">kore o kudasai</div>
+                </div>
+                <div class="phrase-card">
+                    <div class="cat">Food</div>
+                    <div class="en">Delicious!</div>
+                    <div class="ja">おいしい！</div>
+                    <div class="romaji">oishii!</div>
+                </div>
+                <div class="phrase-card">
+                    <div class="cat">Food</div>
+                    <div class="en">Check, please</div>
+                    <div class="ja">お会計お願いします</div>
+                    <div class="romaji">okaikei onegaishimasu</div>
+                </div>
+                <div class="phrase-card">
+                    <div class="cat">Food</div>
+                    <div class="en">Water, please</div>
+                    <div class="ja">お水をお願いします</div>
+                    <div class="romaji">omizu o onegaishimasu</div>
+                </div>
+                <div class="phrase-card">
+                    <div class="cat">Numbers</div>
+                    <div class="en">1 / 2 / 3</div>
+                    <div class="ja">一 / 二 / 三</div>
+                    <div class="romaji">ichi / ni / san</div>
+                </div>
+                <div class="phrase-card">
+                    <div class="cat">Numbers</div>
+                    <div class="en">4 / 5 / 10</div>
+                    <div class="ja">四 / 五 / 十</div>
+                    <div class="romaji">yon / go / jū</div>
+                </div>
+                <div class="phrase-card">
+                    <div class="cat">Emergency</div>
+                    <div class="en">Help!</div>
+                    <div class="ja">助けて！</div>
+                    <div class="romaji">tasukete!</div>
+                </div>
+                <div class="phrase-card">
+                    <div class="cat">Emergency</div>
+                    <div class="en">I don't understand</div>
+                    <div class="ja">わかりません</div>
+                    <div class="romaji">wakarimasen</div>
+                </div>
+                <div class="phrase-card">
+                    <div class="cat">Useful</div>
+                    <div class="en">Do you speak English?</div>
+                    <div class="ja">英語を話せますか？</div>
+                    <div class="romaji">eigo o hanasemasu ka?</div>
+                </div>
+                <div class="phrase-card">
+                    <div class="cat">Useful</div>
+                    <div class="en">Yes / No</div>
+                    <div class="ja">はい / いいえ</div>
+                    <div class="romaji">hai / iie</div>
+                </div>
+                <div class="phrase-card">
+                    <div class="cat">Useful</div>
+                    <div class="en">Please</div>
+                    <div class="ja">お願いします</div>
+                    <div class="romaji">onegaishimasu</div>
+                </div>
+                <div class="phrase-card">
+                    <div class="cat">Useful</div>
+                    <div class="en">Good luck!</div>
+                    <div class="ja">頑張って！</div>
+                    <div class="romaji">ganbatte!</div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- TIPS TAB -->
+    <div id="tips" class="tab-content">
+        <div class="container">
+            <h3 style="margin-bottom: 16px; text-align:center;">💡 Japan Travel Tips</h3>
+            <ul class="tips-list">
+                <li><strong>🚅 JR Pass:</strong> Consider getting a JR Pass if you'll be taking multiple Shinkansen rides. Can be cost-effective for long-distance travel.</li>
+                <li><strong>🚇 IC Cards (Suica/Pasmo):</strong> Get an IC card at any station — works on trains, subways, buses, and even convenience stores. Just tap and go!</li>
+                <li><strong>📱 Apps:</strong> Download Google Maps (works great in Japan), Hyperdia for train schedules, Google Translate (with camera), and Navitime for walking directions.</li>
+                <li><strong>💰 Cash is King:</strong> While cards are widely accepted in cities, many smaller shops and rural areas are cash-only. Always carry yen.</li>
+                <li><strong>🔌 Plugs:</strong> Japan uses Type A/B plugs (same as Thailand). No adapter needed! Voltage is 100V (compatible with most devices).</li>
+                <li><strong>🌡️ November/December Weather:</strong> Cool and crisp, 5-15°C in Tokyo/Osaka/Kyoto. Fuji area can be near freezing. Bring layers, a warm jacket, gloves, and a scarf.</li>
+                <li><strong>🗻 Mt. Fuji Viewing:</strong> Best views are on clear mornings from Lake Kawaguchiko. Chureito Pagoda at sunrise is iconic but requires climbing 398 steps!</li>
+                <li><strong>🏯 Temple Etiquette:</strong> Remove shoes before entering temple buildings. Dress modestly. Be quiet and respectful. Don't take photos where prohibited.</li>
+                <li><strong>👘 Kimono Rental:</strong> Reserve in advance, especially on weekends. Plan 2-3 hours for rental and photos. Returns are usually by 5-6 PM.</li>
+                <li><strong>🏰 Tokyo Disneyland:</strong> Arrive at opening. Use the Tokyo Disney Resort app for wait times and mobile ordering. FastPass is now paid (Disney Premier Access).</li>
+                <li><strong>🍜 Food:</strong> Try ramen, sushi, tempura, yakitori, okonomiyaki (Osaka), takoyaki (Osaka), and regional specialties. Convenience stores (konbini) are excellent!</li>
+                <li><strong>🚶 Walking:</strong> Japan is a walking country. Wear comfortable shoes. You'll easily walk 15,000+ steps per day.</li>
+                <li><strong>🗑️ No Trash Bins:</strong> Public trash cans are rare. Carry a small bag for your trash and dispose of it at your hotel or convenience store.</li>
+                <li><strong>🚭 Smoking Areas:</strong> Smoking is banned in most public areas. Look for designated smoking zones. Don't smoke while walking!</li>
+                <li><strong>🚕 Taxis:</strong> Expensive. Use trains and subways — they're faster, cheaper, and more reliable. Left rear door opens automatically.</li>
+                <li><strong>📶 Wi-Fi/SIM:</strong> Get a pocket Wi-Fi or eSIM at the airport. Free Wi-Fi is available at stations, cafes, and convenience stores but can be spotty.</li>
+                <li><strong>🛍️ Shopping:</strong> Tax-free shopping for foreigners (minimum ¥5,000). Bring your passport. Don't miss Don Quijote for everything!</li>
+                <li><strong>🎌 Bowing:</strong> A slight bow is polite when greeting or thanking someone. Not required from tourists but appreciated.</li>
+                <li><strong>🚃 Train Etiquette:</strong> Quiet on trains. No phone calls. Keep conversations low priority. Priority seats for elderly/pregnant/disabled.</li>
+                <li><strong>🎫 Reservations:</strong> Book popular restaurants, kimono rentals, and some attractions in advance, especially on weekends.</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>🇯🇵 Japan Winter 2025-2026 · Nov 29 – Dec 9 · さようなら！ 👋</p>
+    </footer>
+
+    <script>
+        // ── Theme ──
+        function toggleTheme() {
+            const html = document.documentElement;
+            const btn = document.querySelector('.theme-toggle');
+            if (html.getAttribute('data-theme') === 'dark') {
+                html.removeAttribute('data-theme');
+                btn.textContent = '🌙 Dark';
+                localStorage.setItem('theme', 'light');
+            } else {
+                html.setAttribute('data-theme', 'dark');
+                btn.textContent = '☀️ Light';
+                localStorage.setItem('theme', 'dark');
+            }
+            if (window._map && window._tileLayer) updateMapTiles();
+        }
+        (function() {
+            const t = localStorage.getItem('theme');
+            if (t === 'dark' || (!t && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                document.querySelector('.theme-toggle').textContent = '☀️ Light';
+            }
+        })();
+
+        // ── Tabs ──
+        function showTab(name) {
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+            const target = name === 'map' ? 'map-tab' : name;
+            document.getElementById(target).classList.add('active');
+            event.target.classList.add('active');
+            if (name === 'map' && !window._mapLoaded) initMap();
+        }
+
+        // ── Past Days ──
+        (function dimPast() {
+            const now = new Date();
+            const jpNow = new Date(now.toLocaleString('en-US', { timeZone: 'Asia/Tokyo' }));
+            const today = jpNow.toISOString().slice(0, 10);
+            document.querySelectorAll('.day-section[data-date]').forEach(el => {
+                if (el.dataset.date < today) el.classList.add('past');
+            });
+        })();
+
+        // ── Map ──
+        const LOCATIONS = [
+            { name: "DMK Airport", ja: "ドンムアン空港", lat: 13.9126, lng: 100.6068, day: 1, icon: "✈️" },
+            { name: "Narita Airport (NRT)", ja: "成田国際空港", lat: 35.7647, lng: 140.3864, day: 1, icon: "✈️" },
+            { name: "Ginza", ja: "銀座", lat: 35.6717, lng: 139.7651, day: 2, icon: "🛍️" },
+            { name: "Meiji Jingu", ja: "明治神宮", lat: 35.6764, lng: 139.6993, day: 2, icon: "⛩️" },
+            { name: "Tokyo Tower", ja: "東京タワー", lat: 35.6586, lng: 139.7454, day: 2, icon: "🗼" },
+            { name: "Tsukiji Market", ja: "築地市場", lat: 35.6654, lng: 139.7707, day: 3, icon: "🐟" },
+            { name: "Senso-ji", ja: "浅草寺", lat: 35.7148, lng: 139.7967, day: 3, icon: "⛩️" },
+            { name: "Akihabara", ja: "秋葉原", lat: 35.6984, lng: 139.7741, day: 3, icon: "🎮" },
+            { name: "Tokyo Disneyland", ja: "東京ディズニーランド", lat: 35.6329, lng: 139.8804, day: 4, icon: "🏰" },
+            { name: "Yokohama", ja: "横浜", lat: 35.4437, lng: 139.6380, day: 5, icon: "🌊" },
+            { name: "Fuji City", ja: "富士市", lat: 35.1613, lng: 138.6722, day: 6, icon: "🗻" },
+            { name: "Shiraito Falls", ja: "白糸ノ滝", lat: 35.2356, lng: 138.6297, day: 6, icon: "💧" },
+            { name: "Lake Tanuki", ja: "田貫湖", lat: 35.3950, lng: 138.5983, day: 6, icon: "🏞️" },
+            { name: "Lake Yamanaka", ja: "山中湖", lat: 35.4369, lng: 138.8628, day: 7, icon: "🏞️" },
+            { name: "Oshino Hakkai", ja: "忍野八海", lat: 35.4639, lng: 138.8850, day: 7, icon: "💧" },
+            { name: "Lake Kawaguchiko", ja: "河口湖", lat: 35.5171, lng: 138.7516, day: 7, icon: "🏞️" },
+            { name: "Chureito Pagoda", ja: "忠霊塔", lat: 35.4958, lng: 138.7836, day: 8, icon: "⛩️" },
+            { name: "Kyoto", ja: "京都", lat: 35.0116, lng: 135.7681, day: 8, icon: "🏯" },
+            { name: "Kiyomizu-dera", ja: "清水寺", lat: 34.9949, lng: 135.7850, day: 8, icon: "⛩️" },
+            { name: "Arashiyama", ja: "嵐山", lat: 35.0094, lng: 135.6707, day: 9, icon: "🌲" },
+            { name: "Osaka", ja: "大阪", lat: 34.6937, lng: 135.5023, day: 10, icon: "🏰" },
+            { name: "Osaka Castle", ja: "大阪城", lat: 34.6873, lng: 135.5262, day: 10, icon: "🏯" },
+            { name: "Dotonbori", ja: "道頓堀", lat: 34.6685, lng: 135.5023, day: 10, icon: "🍜" },
+            { name: "Kansai Airport (KIX)", ja: "関西国際空港", lat: 34.4347, lng: 135.2441, day: 11, icon: "✈️" },
+        ];
+
+        const DAY_COLORS = { 1: '#bc002d', 2: '#1565c0', 3: '#2e7d32', 4: '#e65100', 5: '#6a1b9a', 6: '#00838f', 7: '#c62828', 8: '#4527a0', 9: '#00695c', 10: '#f57f17', 11: '#4e342e' };
+
+        function initMap() {
+            window._mapLoaded = true;
+            const script = document.createElement('script');
+            script.src = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js';
+            script.onload = function() {
+                const link = document.createElement('link');
+                link.rel = 'stylesheet';
+                link.href = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css';
+                document.head.appendChild(link);
+
+                window._map = L.map('map').setView([35.6762, 138.6500], 6);
+                updateMapTiles();
+
+                LOCATIONS.forEach(loc => {
+                    const color = DAY_COLORS[loc.day] || '#bc002d';
+                    const marker = L.circleMarker([loc.lat, loc.lng], {
+                        radius: 10, fillColor: color, color: '#fff',
+                        weight: 2, opacity: 1, fillOpacity: 0.9
+                    }).addTo(window._map);
+                    marker.bindPopup(`<strong>${loc.icon} ${loc.name}</strong><br><span style="opacity:0.7">${loc.ja}</span><br><em>Day ${loc.day}</em>`);
+                });
+            };
+            document.head.appendChild(script);
+        }
+
+        function updateMapTiles() {
+            if (!window._map) return;
+            if (window._tileLayer) window._map.removeLayer(window._tileLayer);
+            const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+            const tileUrl = isDark
+                ? 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png'
+                : 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+            window._tileLayer = L.tileLayer(tileUrl, {
+                attribution: '&copy; OSM', maxZoom: 18
+            }).addTo(window._map);
+        }
+
+        // ── SW Registration ──
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('./sw.js').then(() => console.log('SW registered'));
+        }
+    </script>
+</body>
+</html>
